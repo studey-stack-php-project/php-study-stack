@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 14 مايو 2025 الساعة 16:26
+-- Generation Time: 17 مايو 2025 الساعة 20:14
 -- إصدار الخادم: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,12 +43,19 @@ CREATE TABLE `admin` (
 CREATE TABLE `user` (
   `id` int(6) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `usre_name` varchar(255) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
   `university` varchar(255) NOT NULL,
-  `college` varchar(120) NOT NULL,
-  `profile` varchar(255) NOT NULL,
+  `department` varchar(60) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- إرجاع أو استيراد بيانات الجدول `user`
+--
+
+INSERT INTO `user` (`id`, `name`, `user_name`, `university`, `department`, `password`) VALUES
+(1, 'q', 'SharafAlmikhlafi', 'جامعة الحكمة', 'هندسة كمبيوتر', '$2y$10$7J41v23rVxntY5irrfPXkupSfua9hEp5kICptCAFSL7TbBUCt9h72'),
+(3, 'q', 'sharaf', 'جامعة الرواد', 'هندسة كمبيوتر', '$2y$10$eJf.mEfIPfrHBTYg9qP4COtkWBFzMjfSclt5e3AUEbN/9OQYlWNIK');
 
 --
 -- Indexes for dumped tables
@@ -66,7 +73,7 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `usre_name` (`usre_name`);
+  ADD UNIQUE KEY `usre_name` (`user_name`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -82,7 +89,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
