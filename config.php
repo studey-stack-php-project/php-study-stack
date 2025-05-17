@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     $dsn = "mysql:host=localhost;dbname=study_stack_db";
     $user = "root";
     $password = "";
