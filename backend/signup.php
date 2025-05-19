@@ -28,6 +28,6 @@ if (isset($data["name"], $data["user_name"], $data["university"], $data["departm
 } else {
     echo json_encode([
         "status" => "failed", 
-        "message" => "Missing or invalid data sent to server"
+        "message" =>"البيانات المرسله الى الخادم غير صحيحة او مفقودة"
     ]);
 }

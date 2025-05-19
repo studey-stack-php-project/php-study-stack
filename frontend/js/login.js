@@ -33,7 +33,8 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
         if(data.status === "success"){
             alert("تم تسجيل الدخول ب نجاح")
         }else{
-            alert("فشل التسجيل: " + (data.message || "حدث خطأ غير معروف"));
+            errorMess.classList.remove("d-none");
+            errorMess.textContent = "فشل التسجيل: " + (data.message || "حدث خطأ غير معروف");
         }
     })
     .catch(err =>{
