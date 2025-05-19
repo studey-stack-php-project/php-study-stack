@@ -21,14 +21,14 @@ function renderBookCard(array $book): void {
 
     ?>
     <div class="col" dir="rtl">
-        <div class="card h-100 shadow-sm border-0">
+        <div class="card h-100 shadow-sm border-0 rounded-4">
             <!-- Link stretched to entire card -->
             <a href="<?= $link ?>" target="_blank" class="stretched-link"></a>
 
             <!-- Cover Image -->
             <img
             src="<?= $cover ?>"
-            class="card-img-top"
+            class="card-img-top rounded-top-4"
             alt="<?= $title ?>"
             style="object-fit: cover; height: 240px;"
             >

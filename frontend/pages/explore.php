@@ -54,20 +54,21 @@ $books = [
     <div class="bg-cover bg-center min-vh-100 d-flex flex-column justify-content-center align-items-center p-5 "
         style="background-image: url('<?= ASSETS_URL ?>login-bg.png'); background-size: cover; background-position: center;">
         
-
-        <div class="container mx-auto" style="max-width: 880px;">
-            <h1 class="fw-bold text-end mb-4">:ملخصات</h1>
-            <?php renderBookGrid($books); ?>
-        </div>
-
-        <div class="container mx-auto" style="max-width: 880px;">
-            <h1 class="fw-bold text-end mb-4">:مراجع</h1>
-            <?php renderBookGrid($books); ?>
+        <div>
+            <div class="container mx-auto" style="max-width: 880px;">
+                <h1 class="fw-bold text-end mb-4">:ملخصات</h1>
+                <?php renderBookGrid($books); ?>
+            </div>
+            <br><hr><br>
+            <div class="container mx-auto" style="max-width: 880px;">
+                <h1 class="fw-bold text-end mb-4">:مراجع</h1>
+                <?php renderBookGrid($books); ?>
+            </div>
         </div>
 
     </div>
 
-
+    <?php include_once INC_DIR . 'foot.php' ?>
 </body>
 
 </html>

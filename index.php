@@ -1,5 +1,8 @@
 <?php
 require_once 'config.php';
+
+header("location: frontend/pages/signup.php");
+exit;
 ?>
 
 <!DOCTYPE html>
@@ -9,6 +12,6 @@ require_once 'config.php';
     <title>SignUp Page</title>
 </head>
 <body>
-    <?php include_once 'signup.php' ?>
+    <!-- <?php include_once 'signup.php' ?> -->
 </body>
 </html>

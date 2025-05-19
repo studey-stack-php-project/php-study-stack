@@ -53,7 +53,7 @@ require_once '../../config.php';
         </div>
     </div>
 
-
+    <?php include_once INC_DIR . 'foot.php' ?>
 </body>
 
 </html>

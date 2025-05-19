@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../../config.php';
 ?>
 
 <!DOCTYPE html>
@@ -87,6 +87,7 @@ require_once 'config.php';
             </div>
         </div>
     </div>
+    <?php include_once INC_DIR . 'foot.php' ?>
     <script src="frontend/js/siginup.js"></script>
 </body>
 </html>
