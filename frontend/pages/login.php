@@ -30,7 +30,7 @@ require_once '../../config.php';
             </div>
 
             <div class="w-100">
-                <form>
+                <form id="loginForm">
 
                     <!-- اسم المستخدم -->
                     <div class="mb-2">
@@ -49,11 +49,19 @@ require_once '../../config.php';
                         <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
                     </div>
                 </form>
+                <div id="errorMsg" class="alert alert-danger d-none" role="alert"></div>
+                <div class="text-center pt-2">
+                    <span>ليس لدي حساب،</span>
+                    <a href="../../index.php">إنشاء حساب</a>
+                </div>
             </div>
         </div>
     </div>
 
+
     <?php include_once INC_DIR . 'foot.php' ?>
+
+
 </body>
 
 </html>

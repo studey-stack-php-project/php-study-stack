@@ -1,4 +1,5 @@
 <?php
+
 require_once '../../config.php';
 require_once '../components/book-cards.php';
 
@@ -72,3 +73,4 @@ $books = [
 </body>
 
 </html>
+
