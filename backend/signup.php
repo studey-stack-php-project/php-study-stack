@@ -17,6 +17,7 @@ if (isset($data["name"], $data["user_name"], $data["university"], $data["departm
         $stmt->bindParam(":password", $hashedPassword);
 
         $stmt->execute();
+        $_SESSION["name"] = $data["name"];
 
         echo json_encode(["status" => "success"]);
     } catch (Exception $e) {

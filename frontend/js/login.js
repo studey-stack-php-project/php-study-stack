@@ -31,13 +31,14 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
     .then(response => response.json())
     .then(data =>{
         if(data.status === "success"){
-            alert("تم تسجيل الدخول ب نجاح")
+            window.location.href = "/study stack/frontend/pages/explore.php";
         }else{
             errorMess.classList.remove("d-none");
             errorMess.textContent = "فشل التسجيل: " + (data.message || "حدث خطأ غير معروف");
         }
     })
     .catch(err =>{
-        alert("فشل الاتصال بالسيرفر")
+        errorMess.classList.remove("d-none");
+        errorMess.textContent ="فشل الاتصال بالسيرفر";
     })
 })

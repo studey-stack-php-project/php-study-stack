@@ -44,13 +44,15 @@ document.getElementById("signupForm").addEventListener("submit", function(e){
     .then(response => response.json())
     .then(data =>{
         if(data.status === "success"){
-            alert("تم انشاء حساب بنجاح");
+            window.location.href = "/study stack/frontend/pages/explore.php";
         }else{
-            alert("فشل انشاء حساب: " + (data.message || "حدث خطأ غير معروف"));
+            errorMess.classList.remove("d-none");
+            errorMess.textContent = "فشل التسجيل: " + (data.message || "حدث خطأ غير معروف");
         }
     })
     .catch(err => {
-        alert("فشل الاتصال بالسيرفر");
+        errorMess.classList.remove("d-none");
+        errorMess.textContent = "فشل الاتصال بالسيرفر";
     });
     
 
