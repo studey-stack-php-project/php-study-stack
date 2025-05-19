@@ -46,7 +46,7 @@
                         <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
                     </div>
                 </form>
-                <div id="errorMsg" class="alert alert-danger d-none" role="alert"></div>
+
             </div>
         </div>
     </div>
