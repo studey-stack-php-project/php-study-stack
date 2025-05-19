@@ -44,13 +44,12 @@ document.getElementById("signupForm").addEventListener("submit", function(e){
     .then(response => response.json())
     .then(data =>{
         if(data.status === "success"){
-            alert("تم التسجيل بنجاح");
+            alert("تم انشاء حساب بنجاح");
         }else{
-            alert("فشل التسجيل: " + (data.message || "حدث خطأ غير معروف"));
+            alert("فشل انشاء حساب: " + (data.message || "حدث خطأ غير معروف"));
         }
     })
     .catch(err => {
-        console.error("Fetch error:", err);
         alert("فشل الاتصال بالسيرفر");
     });
     

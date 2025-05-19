@@ -27,7 +27,7 @@
             </div>
 
             <div class="w-100">
-                <form>
+                <form id="loginForm">
 
                     <!-- اسم المستخدم -->
                     <div class="mb-2">
@@ -46,15 +46,11 @@
                         <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
                     </div>
                 </form>
-                <div class="text-center pt-2">
-                    <span>ليس لدي حساب،</span>
-                    <a href="../../index.php">إنشاء حساب</a>
-                </div>
+
             </div>
         </div>
     </div>
-
-
+    <script src="../js/login.js"></script>
 </body>
 
 </html>
