@@ -1,10 +1,14 @@
+<?php
+require_once 'config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include "frontend/include/head.php" ?>
+    <?php include_once INC_DIR . 'head.php' ?>
     <title>SignUp Page</title>
 </head>
 <body>
-    <?php include_once "frontend/pages/signup.php" ?>
+    <?php include_once 'signup.php' ?>
 </body>
 </html>
