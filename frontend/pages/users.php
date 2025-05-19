@@ -2,23 +2,22 @@
 session_start();
 
 
-if(isset($_SESSION["name"])){
+if (isset($_SESSION["name"])) {
     echo "hello " . $_SESSION["name"];
-}else{
+} else {
     header("location: login.php");
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <?php include "../include/head.php" ?>
-    <title>explore</title>
+    <title>users</title>
 </head>
 
 <body>
-    <a href="users.php" class="btn btn-primary">المستخدمين</a>
+
 </body>
 
 </html>

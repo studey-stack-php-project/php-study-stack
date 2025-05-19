@@ -3,11 +3,12 @@ require_once "../config.php";
 
 header("Content-Type: application/json");
 $data = json_decode(file_get_contents("php://input"), true);
+$data["role"] = "user";
 
 if (isset($data["name"], $data["user_name"], $data["university"], $data["department"], $data["password"])) {
     try {
 
-        $stmt = $conn->prepare("INSERT INTO user (name, user_name, university, department, password) VALUES (:name, :user_name, :university, :department, :password)");
+        $stmt = $conn->prepare("INSERT INTO user (name, user_name, university, department, password, role) VALUES (:name, :user_name, :university, :department, :password, :role)");
 
         $stmt->bindParam(":name", $data["name"]);
         $stmt->bindParam(":user_name", $data["user_name"]);
@@ -15,6 +16,7 @@ if (isset($data["name"], $data["user_name"], $data["university"], $data["departm
         $stmt->bindParam(":department", $data["department"]);
         $hashedPassword = password_hash($data["password"], PASSWORD_DEFAULT);
         $stmt->bindParam(":password", $hashedPassword);
+        $stmt->bindParam(":role", $data["role"]);
 
         $stmt->execute();
         $_SESSION["name"] = $data["name"];
