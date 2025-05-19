@@ -46,7 +46,11 @@
                         <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
                     </div>
                 </form>
-
+                <div id="errorMsg" class="alert alert-danger d-none" role="alert"></div>
+                <div class="text-center pt-2">
+                    <span>ليس لدي حساب،</span>
+                    <a href="../../index.php">إنشاء حساب</a>
+                </div>
             </div>
         </div>
     </div>
