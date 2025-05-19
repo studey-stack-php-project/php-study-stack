@@ -49,6 +49,19 @@ CREATE TABLE `user` (
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+--
+-- بنية الجدول `books`
+--
+CREATE TABLE `books` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(255) NOT NULL,
+  `pdf_link` VARCHAR(255) NOT NULL,
+  `description` TEXT NOT NULL,
+  `cover_image` VARCHAR(255) NOT NULL DEFAULT 'frontend/assets/pdf-icon.png',  -- القيمة الافتراضية
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- إرجاع أو استيراد بيانات الجدول `user`
 --

@@ -1,8 +1,16 @@
+<?php
+require_once '../../config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <?php include_once INC_DIR . 'head.php' ?>
+    <title>SignUp Page</title>
+</head>
 <body>
     <div class="bg-cover bg-center min-vh-100 d-flex justify-content-center align-items-center"
-    style="background-image: url('frontend/assets/login-bg.png'); background-size: cover; background-position: center;">
+    style="background-image: url('<?= ASSETS_URL ?>login-bg.png'); background-size: cover; background-position: center;">
         <div
         class="mx-auto d-flex flex-column justify-content-center align-items-center text-end bg-white rounded-4 shadow p-3 p-sm-4"
         style="max-width: 420px; width:80%; gap: 0rem; border: 1px solid rgba(255,255,255,0.2); box-sizing: border-box;"
@@ -10,7 +18,7 @@
 
             <div class="w-100 mb-2">
                 <div class="text-center py-0">
-                    <img src="frontend/assets/logo.png" alt="Logo" class="mx-auto" style="height: 80px;">
+                    <img src="<?= ASSETS_URL ?>logo.png" alt="Logo" class="mx-auto" style="height: 80px;">
                 </div>
 
                 <div class="text-center">
@@ -83,6 +91,7 @@
             </div>
         </div>
     </div>
+    <?php include_once INC_DIR . 'foot.php' ?>
     <script src="frontend/js/siginup.js"></script>
 </body>
 </html>
