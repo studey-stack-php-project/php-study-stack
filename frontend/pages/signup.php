@@ -85,7 +85,7 @@ require_once '../../config.php';
                 </form>
                 <div class="text-center pt-2">
                     <span>لدي حساب بالفعل، </span>
-                    <a href="frontend/pages/login.php">تسجيل الدخول</a>
+                    <a href="login.php">تسجيل الدخول</a>
                 </div>
                 <div id="errorMsg" class="alert alert-danger d-none" role="alert"></div>
             </div>
